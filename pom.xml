@@ -1,0 +1,53 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.cafeine</groupId>
+  <artifactId>kubernetes</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <parent>
+    <groupId>io.helidon.applications</groupId>
+    <artifactId>helidon-mp</artifactId>
+    <version>2.0.0</version>
+    <relativePath/>
+  </parent>
+  
+  <properties>
+    <coherence.groupId>com.oracle.coherence.ce</coherence.groupId>
+    <coherence.version>20.06</coherence.version>
+  </properties>
+  
+  <dependencies>
+    <!-- Helidon dependencies-->
+    <dependency>
+      <groupId>io.helidon.microprofile.bundles</groupId>
+      <artifactId>helidon-microprofile</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.glassfish.jersey.media</groupId>
+      <artifactId>jersey-media-json-binding</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.glassfish.jersey.media</groupId>
+      <artifactId>jersey-media-sse</artifactId>
+    </dependency>
+
+    <!-- Coherence dependencies -->
+    <dependency>
+      <groupId>${coherence.groupId}</groupId>
+      <artifactId>coherence-cdi-server</artifactId>
+      <version>${coherence.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>${coherence.groupId}</groupId>
+      <artifactId>coherence-mp-config</artifactId>
+      <version>${coherence.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>${coherence.groupId}</groupId>
+      <artifactId>coherence-mp-metrics</artifactId>
+      <version>${coherence.version}</version>
+    </dependency>
+
+  </dependencies>
+  
+</project>
